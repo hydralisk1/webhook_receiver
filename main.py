@@ -2,6 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+@app.get('/')
+def get_home():
+    return { "Hello": "World Post" }
+
 @app.post('/')
-def home():
-    return { "Hello": "World" }
+def post_home():
+    return { "Hello": "World Post" }
