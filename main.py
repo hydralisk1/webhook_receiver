@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.webhooks.post('/')
+@app.post('/')
 def home():
     return { "Hello": "World" }
