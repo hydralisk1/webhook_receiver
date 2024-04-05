@@ -3,9 +3,9 @@ import uvicorn
 
 app = FastAPI()
 
-@app.get('/')
-async def get_home():
-    return { "Hello": "World Post" }
+@app.get('/', tag=["Root"])
+async def read_root():
+    return { "Hello": "World Get" }
 
 @app.post('/')
 async def post_home():
