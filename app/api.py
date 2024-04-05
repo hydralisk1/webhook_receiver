@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get('/', tag=["Root"])
+@app.get('/', tags=["Root"])
 async def read_root():
     return { "Hello": "World Get" }
 
